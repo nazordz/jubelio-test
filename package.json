@@ -5,7 +5,7 @@
   "main": "lib/main.js",
   "author": "nazordz",
   "repository": {
-    "url": "https://github.com/nazordz/jubelio-test.git"
+    "url": "https://github.com/nazordz/jubelio-test"
   },
   "license": "MIT",
   "dependencies": {
