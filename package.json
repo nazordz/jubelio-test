@@ -1,0 +1,32 @@
+{
+  "name": "jubelio-test",
+  "version": "1.0.0",
+  "description": "interview test",
+  "main": "lib/main.js",
+  "author": "nazordz",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2",
+    "@hapi/inert": "^7.1.0",
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "dotenv": "^16.1.4",
+    "joi": "^17.9.2",
+    "pg": "^8.11.0",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon --inspect src/main.ts",
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/hapi": "^18.0.8",
+    "@types/node": "^20.3.1",
+    "@types/pg": "^8.10.2",
+    "@types/uuid": "^9.0.2",
+    "@types/woocommerce__woocommerce-rest-api": "^1.0.2",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}
