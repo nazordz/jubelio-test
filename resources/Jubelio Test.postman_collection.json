@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "0636dfb3-459c-4091-a028-25a1965c471b",
+		"name": "Jubelio Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5860955"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "fetch product jubelio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/fill-jubelio-products",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"fill-jubelio-products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paginate product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/products?page=2&size=5",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/products/tas-01",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"products",
+								"tas-01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/products/sku-008",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"products",
+								"sku-008"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sku",
+									"value": "sku-008",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Product 08",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/nazordz/Downloads/Artwork-Website_04.jpg"
+								},
+								{
+									"key": "price",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "desc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/products",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update produc",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sku",
+									"value": "sku-004",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "produk ke 4",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/nazordz/Downloads/airport.jpg"
+								},
+								{
+									"key": "price",
+									"value": "20.12",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ke isi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/products/sku-004",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"products",
+								"sku-004"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adjustment Transaction",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sku\": \"sku-003\",\n    \"qty\": \"15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/adjustment-transactions",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"adjustment-transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sku\": \"sku-004\",\n    \"qty\": \"12.00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/adjustment-transactions/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"adjustment-transactions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paginate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/adjustment-transactions?page=1&size=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"adjustment-transactions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/adjustment-transactions/3",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"adjustment-transactions",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/adjustment-transactions/3",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"adjustment-transactions",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{CUSTOMER_SECRET}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{CUSTOMER_KEY}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "STORE_URL",
+			"value": "https://codetesting.jubelio.store",
+			"type": "string"
+		},
+		{
+			"key": "CUSTOMER_SECRET",
+			"value": "cs_7be10f0328c5b1d6a1a3077165b226af71d8b9dc",
+			"type": "string"
+		},
+		{
+			"key": "CUSTOMER_KEY",
+			"value": "ck_1cbb2c1902d56b629cd9a555cc032c4b478b26ce",
+			"type": "string"
+		},
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:4000/api",
+			"type": "string"
+		}
+	]
+}
