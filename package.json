@@ -4,6 +4,9 @@
   "description": "interview test",
   "main": "lib/main.js",
   "author": "nazordz",
+  "repository": {
+    "url": "https://github.com/nazordz/jubelio-test.git"
+  },
   "license": "MIT",
   "dependencies": {
     "@hapi/hapi": "^21.3.2",
